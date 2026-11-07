@@ -70,6 +70,18 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
           <div className="prose">
             <h2>Selling your home in {area.name}</h2>
             <p>{area.intro}</p>
+            {area.districts ? (
+              <>
+                <h2>Postcodes we cover in {area.name}</h2>
+                <ul>
+                  {area.districts.map((d) => (
+                    <li key={d.code}>
+                      <strong>{d.code}:</strong> {d.places}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ) : null}
             <h2>About the area</h2>
             <p>{area.character}</p>
             <h2>Getting around</h2>

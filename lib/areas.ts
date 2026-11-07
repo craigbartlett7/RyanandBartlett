@@ -7,6 +7,8 @@ export type Area = {
   character: string;
   getAround: string;
   sellingNote: string;
+  // Optional breakdown of postcode districts (and the neighbourhoods in each).
+  districts?: { code: string; places: string }[];
 };
 
 // Keep these factual and general. Add specific local figures only once you have
@@ -16,6 +18,12 @@ export const areas: Area[] = [
     slug: "aylesbury",
     name: "Aylesbury",
     postcodes: "HP19, HP20, HP21",
+    districts: [
+      { code: "HP19", places: "Fairford Leys, Buckingham Park, Quarrendon, Watermead and Berryfields" },
+      { code: "HP20", places: "the town centre, Broughton and Elmhurst" },
+      { code: "HP21", places: "Bedgrove, Queens Park, Southcourt, Walton and Elm Farm" },
+      { code: "HP18 and HP22", places: "the edges of town, including parts of Berryfields (HP18) and Kingsbrook (HP22)" },
+    ],
     blurb: "The county town, from period homes to new neighbourhoods.",
     intro:
       "Aylesbury is where Ryan & Bartlett is based, and it is the market we know best. The town has a broad mix of homes, from older terraces and semis close to the centre to newer estates on the edge of town.",
