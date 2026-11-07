@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <Logo />
+        <Logo priority />
         <nav className="nav-desktop" aria-label="Main">
           {nav.map((n) => (
             <Link key={n.href} href={n.href}>
