@@ -1,19 +1,20 @@
 :root {
-  --navy: #14213d;
-  --navy-2: #1d2f57;
-  --coral: #ff7a59;
-  --coral-dark: #e8613f;
-  --amber: #fca311;
-  --cream: #fff8f1;
-  --cream-2: #fdeee0;
-  --ink: #1b2437;
-  --muted: #5b6579;
-  --line: #eadfce;
+  /* Brand colours sampled from the logo */
+  --navy: #122335;
+  --navy-2: #1b3350;
+  --coral: #ad8e50; /* brand gold (kept variable name for existing rules) */
+  --coral-dark: #8a6a2c; /* darker gold for text on light backgrounds */
+  --amber: #d6b676; /* light gold for use on navy */
+  --cream: #fcf7f1;
+  --cream-2: #f4ead9;
+  --ink: #1a2433;
+  --muted: #566075;
+  --line: #e8dfd0;
   --white: #ffffff;
-  --radius: 16px;
-  --shadow: 0 10px 30px rgba(20, 33, 61, 0.1);
-  --font-heading: "Fraunces", Georgia, serif;
-  --font-body: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --radius: 12px;
+  --shadow: 0 12px 32px rgba(18, 35, 53, 0.1);
+  --font-heading: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 *,
@@ -31,7 +32,7 @@ body {
   font-family: var(--font-body);
   color: var(--ink);
   background: var(--white);
-  line-height: 1.6;
+  line-height: 1.65;
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
 }
@@ -42,22 +43,24 @@ h3,
 h4 {
   font-family: var(--font-heading);
   color: var(--navy);
-  line-height: 1.15;
+  line-height: 1.12;
   margin: 0 0 0.5em;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.025em;
 }
 
 h1 {
-  font-size: clamp(2.3rem, 5vw, 3.6rem);
-  font-weight: 700;
+  font-size: clamp(2.3rem, 5vw, 3.7rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
 }
 h2 {
   font-size: clamp(1.7rem, 3.2vw, 2.4rem);
-  font-weight: 700;
+  font-weight: 800;
 }
 h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
 }
 
 p {
@@ -110,9 +113,9 @@ svg {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 14px 24px;
-  border-radius: 999px;
-  font-weight: 800;
+  padding: 14px 26px;
+  border-radius: 10px;
+  font-weight: 700;
   font-family: var(--font-body);
   font-size: 1rem;
   text-decoration: none;
@@ -129,11 +132,11 @@ svg {
 }
 .btn-primary {
   background: var(--coral);
-  color: #fff;
-  box-shadow: 0 6px 16px rgba(255, 122, 89, 0.35);
+  color: var(--navy);
+  box-shadow: 0 6px 16px rgba(173, 142, 80, 0.35);
 }
 .btn-primary:hover {
-  background: var(--coral-dark);
+  background: #bd9d5e;
 }
 .btn-accent {
   background: var(--amber);
@@ -171,47 +174,22 @@ svg {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  min-height: 72px;
+  min-height: 76px;
 }
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
   text-decoration: none;
-  color: var(--navy);
 }
-.logo-mark {
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  background: var(--navy);
-  color: #fff;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 0.95rem;
-  letter-spacing: -0.02em;
+.logo img {
+  display: block;
+  height: 52px;
+  width: auto;
 }
-.logo-mark span {
-  color: var(--coral);
-  margin: 0 1px;
-}
-.logo-text {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.3rem;
-  color: var(--navy);
-}
-.logo-text .amp {
-  color: var(--coral);
-}
-.logo-light .logo-text {
-  color: #fff;
-}
-.logo-light .logo-mark {
-  background: #fff;
-  color: var(--navy);
+@media (min-width: 900px) {
+  .logo img {
+    height: 58px;
+  }
 }
 .nav-desktop {
   display: none;
@@ -220,7 +198,8 @@ svg {
 .nav-desktop a {
   color: var(--navy);
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 0.97rem;
 }
 .nav-desktop a:hover {
   color: var(--coral-dark);
@@ -299,7 +278,7 @@ svg {
 
 /* ---------- Hero ---------- */
 .hero {
-  background: radial-gradient(1200px 500px at 85% -10%, rgba(255, 122, 89, 0.22), transparent 60%),
+  background: radial-gradient(1200px 500px at 85% -10%, rgba(173, 142, 80, 0.2), transparent 60%),
     linear-gradient(180deg, var(--cream) 0%, #fff 100%);
   padding: 56px 0 72px;
 }
@@ -318,17 +297,17 @@ svg {
   display: inline-block;
   background: var(--cream-2);
   color: var(--coral-dark);
-  font-weight: 800;
-  font-size: 0.85rem;
-  letter-spacing: 0.06em;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 6px 14px;
-  border-radius: 999px;
+  padding: 7px 14px;
+  border-radius: 6px;
   margin-bottom: 18px;
 }
 .hero h1 em {
   font-style: normal;
-  color: var(--coral);
+  color: #9c7a35;
 }
 .lead {
   font-size: 1.2rem;
@@ -365,8 +344,9 @@ svg {
   height: 22px;
   border-radius: 50%;
   background: var(--coral);
-  color: #fff;
+  color: var(--navy);
   font-size: 0.8rem;
+  font-weight: 800;
 }
 
 /* ---------- Sections ---------- */
@@ -473,11 +453,11 @@ svg {
   place-items: center;
   width: 38px;
   height: 38px;
-  border-radius: 12px;
+  border-radius: 10px;
   background: var(--coral);
-  color: #fff;
+  color: var(--navy);
   font-family: var(--font-heading);
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .steps {
@@ -588,9 +568,9 @@ svg {
 }
 .score .big {
   font-family: var(--font-heading);
-  font-size: 2.2rem;
-  color: var(--coral);
-  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--coral-dark);
+  font-weight: 800;
   line-height: 1;
   margin-bottom: 8px;
 }
@@ -634,9 +614,9 @@ svg {
 }
 .area-card .pc {
   font-size: 0.85rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--coral-dark);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
 }
 .area-card p {
   margin: 8px 0 0;
@@ -711,7 +691,7 @@ svg {
 .faq summary {
   cursor: pointer;
   padding: 18px 0;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--navy);
   list-style: none;
   display: flex;
@@ -723,7 +703,7 @@ svg {
 }
 .faq summary::after {
   content: "+";
-  color: var(--coral);
+  color: var(--coral-dark);
   font-size: 1.4rem;
   line-height: 1;
 }
@@ -769,7 +749,7 @@ svg {
 .form-card {
   background: #fff;
   border: 1px solid var(--line);
-  border-radius: 22px;
+  border-radius: 16px;
   padding: 28px;
   box-shadow: var(--shadow);
 }
@@ -795,7 +775,7 @@ svg {
 }
 label {
   display: block;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 0.92rem;
   margin-bottom: 6px;
   color: var(--navy);
@@ -818,7 +798,7 @@ select:focus,
 textarea:focus {
   border-color: var(--coral);
   outline: none;
-  box-shadow: 0 0 0 3px rgba(255, 122, 89, 0.25);
+  box-shadow: 0 0 0 3px rgba(173, 142, 80, 0.3);
 }
 .hint {
   font-size: 0.88rem;
@@ -845,7 +825,7 @@ textarea:focus {
   margin-top: 4px;
   width: 18px;
   height: 18px;
-  accent-color: var(--coral);
+  accent-color: var(--navy);
   flex: none;
 }
 .form-error {
@@ -869,8 +849,8 @@ textarea:focus {
   height: 56px;
   margin: 0 auto 14px;
   border-radius: 50%;
-  background: var(--coral);
-  color: #fff;
+  background: var(--navy);
+  color: var(--amber);
   display: grid;
   place-items: center;
   font-size: 1.6rem;
@@ -909,6 +889,9 @@ textarea:focus {
 }
 .site-footer li {
   margin-bottom: 8px;
+}
+.site-footer .logo img {
+  height: 76px;
 }
 .footer-tag {
   margin-top: 14px;

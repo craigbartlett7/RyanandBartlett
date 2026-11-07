@@ -31,7 +31,7 @@ export default function PromisePage() {
           {promises.map((p, i) => (
             <article key={p.title} className="card" style={{ marginBottom: 18 }}>
               <h2 style={{ fontSize: "1.5rem" }}>
-                <span style={{ color: "var(--coral)" }}>{i + 1}.</span> {p.title}
+                <span style={{ color: "var(--coral-dark)" }}>{i + 1}.</span> {p.title}
               </h2>
               <p>{p.body}</p>
             </article>

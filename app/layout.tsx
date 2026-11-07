@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Nunito } from "next/font/google";
+import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -8,11 +8,11 @@ import JsonLd from "@/components/JsonLd";
 import { areas } from "@/lib/areas";
 import { site } from "@/lib/site";
 
-const heading = Fraunces({ subsets: ["latin"], variable: "--font-heading", display: "swap" });
-const body = Nunito({ subsets: ["latin"], variable: "--font-body", display: "swap" });
+const heading = Manrope({ subsets: ["latin"], variable: "--font-heading", display: "swap" });
+const body = Inter({ subsets: ["latin"], variable: "--font-body", display: "swap" });
 
 export const viewport: Viewport = {
-  themeColor: "#14213d",
+  themeColor: "#122335",
   width: "device-width",
   initialScale: 1,
 };
@@ -48,6 +48,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     name: site.name,
     slogan: site.tagline,
     url: site.url,
+    logo: `${site.url}/logo.png`,
+    image: `${site.url}/logo.png`,
     description:
       "Independent estate agents in Aylesbury, Buckinghamshire, selling homes with verified buyers, a sales pack ready at instruction and a named progressor.",
     ...(site.phone ? { telephone: site.phone } : {}),
