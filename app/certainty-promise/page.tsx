@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import CtaBand from "@/components/CtaBand";
 import { promises } from "@/lib/site";
+import { packGroups } from "@/lib/salespack";
 
 export const metadata: Metadata = {
   title: "Our Certainty Promise – Selling Your Home in Aylesbury",
@@ -44,6 +45,24 @@ export default function PromisePage() {
               you sign.
             </p>
           </div>
+
+          <h2>What&apos;s in your sales pack?</h2>
+          <p>
+            Promise 2 is only worth something if you know what it means. Here is what we help you put together
+            before your home goes live:
+          </p>
+          <ul className="checklist">
+            {packGroups[0].items.slice(0, 5).map((it) => (
+              <li key={it.title}>
+                <strong>{it.title}</strong>
+                <span>{it.note}</span>
+              </li>
+            ))}
+          </ul>
+          <p>
+            Leasehold or estate homes need a few extras, and some can take weeks to arrive, so we order them on day
+            one. <Link href="/sales-pack">See the full sales pack checklist</Link>.
+          </p>
 
           <h2>How we&apos;ll hold ourselves to it</h2>
           <p>

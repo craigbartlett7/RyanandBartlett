@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["", 1],
     ["/valuation", 0.9],
     ["/certainty-promise", 0.8],
+    ["/sales-pack", 0.7],
     ["/areas", 0.8],
     ["/about", 0.6],
     ["/contact", 0.6],
