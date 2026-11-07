@@ -193,9 +193,10 @@ svg {
 }
 .nav-desktop {
   display: none;
-  gap: 26px;
+  gap: 22px;
 }
 .nav-desktop a {
+  white-space: nowrap;
   color: var(--navy);
   text-decoration: none;
   font-weight: 600;
@@ -259,13 +260,15 @@ svg {
   font-weight: 700;
   text-decoration: none;
 }
-@media (min-width: 900px) {
+@media (min-width: 1120px) {
   .nav-desktop {
     display: flex;
   }
   .nav-mobile {
     display: none;
   }
+}
+@media (min-width: 900px) {
   .header-phone {
     display: inline;
   }
@@ -988,4 +991,19 @@ textarea:focus {
 }
 @media print {
   .site-header, .site-footer, .mobile-cta, .no-print, .cta-band { display: none !important; }
+}
+
+.part-tag {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--coral);
+  color: var(--navy);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  white-space: nowrap;
+  margin-bottom: 12px;
 }

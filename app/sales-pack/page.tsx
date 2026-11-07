@@ -68,7 +68,7 @@ export default function SalesPackPage() {
           <div className="promise-grid" style={{ marginTop: 16 }}>
             {materialInfo.map((m) => (
               <div key={m.part} className="promise-card">
-                <span className="promise-num">{m.part}</span>
+                <span className="part-tag">{m.part}</span>
                 <h3>{m.title}</h3>
                 <p>{m.body}</p>
               </div>

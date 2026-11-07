@@ -25,6 +25,7 @@ export const phoneHref = site.phone ? `tel:${site.phone.replace(/[^\d+]/g, "")}`
 export const nav = [
   { href: "/", label: "Home" },
   { href: "/certainty-promise", label: "Our promise" },
+  { href: "/sales-pack", label: "Sales pack checklist" },
   { href: "/areas", label: "Areas we cover" },
   { href: "/about", label: "About us" },
   { href: "/contact", label: "Contact" },

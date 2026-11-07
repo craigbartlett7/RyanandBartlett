@@ -33,9 +33,6 @@ export default function Footer() {
               </li>
             ))}
             <li>
-              <Link href="/sales-pack">Sales pack checklist</Link>
-            </li>
-            <li>
               <Link href="/valuation">Free valuation</Link>
             </li>
           </ul>
