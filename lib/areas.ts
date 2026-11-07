@@ -104,6 +104,48 @@ export const areas: Area[] = [
     sellingNote:
       "Buyers looking in the village are usually comparing it with nearby villages and Aylesbury's edges, so competitive pricing and well-prepared marketing matter.",
   },
+  {
+    slug: "fairford-leys",
+    name: "Fairford Leys",
+    postcodes: "HP19",
+    blurb: "A planned neighbourhood on the north side of Aylesbury.",
+    intro:
+      "Fairford Leys is a neighbourhood on the north side of Aylesbury, built over recent decades as a planned community. It is popular with families and commuters who want newer housing close to the town.",
+    character:
+      "The area was designed as a whole, with a mix of house types, local amenities and green spaces, so homes here tend to compare closely with each other. That makes accurate pricing especially important.",
+    getAround:
+      "Fairford Leys is a short drive from Aylesbury town centre and station, with road links towards the A41 and A413.",
+    sellingNote:
+      "With similar homes often on the market at once, buyers compare closely. We show you the sold evidence behind our price so your home is positioned properly from day one.",
+  },
+  {
+    slug: "kingsbrook",
+    name: "Kingsbrook",
+    postcodes: "HP22",
+    blurb: "A newer neighbourhood on the edge of Aylesbury.",
+    intro:
+      "Kingsbrook is one of Aylesbury's newer neighbourhoods, on the edge of the town. Most homes here are modern, which suits buyers wanting a recent build with up-to-date energy performance.",
+    character:
+      "As part of Aylesbury's Garden Town growth, Kingsbrook has seen many homes sold for the first time and are now coming to the resale market. New-build paperwork such as warranties and estate charges matters here.",
+    getAround:
+      "Kingsbrook sits on the edge of Aylesbury, with the town centre, the station and main routes out of town within easy reach by car.",
+    sellingNote:
+      "Resales on newer estates often involve warranties, estate management charges and builder paperwork, which is exactly what our sales pack is designed to gather before you list.",
+  },
+  {
+    slug: "watermead",
+    name: "Watermead",
+    postcodes: "HP19",
+    blurb: "A lakeside neighbourhood north of Aylesbury.",
+    intro:
+      "Watermead is a neighbourhood north of Aylesbury, known for its lakes and waterside setting. It appeals to families and downsizers who like a quieter, green feel while staying close to the town.",
+    character:
+      "Homes range across a mix of styles and sizes, and a waterside or open outlook can make a real difference to buyer interest and value.",
+    getAround:
+      "Watermead is a short drive from Aylesbury town centre, with the A41 and A413 close by.",
+    sellingNote:
+      "Location within the neighbourhood matters a great deal here, so our valuations look at comparable sales on your own road and nearby, not just the postcode.",
+  },
 ];
 
 export const getArea = (slug: string) => areas.find((a) => a.slug === slug);

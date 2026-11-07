@@ -4,9 +4,9 @@ import CtaBand from "@/components/CtaBand";
 import { areas } from "@/lib/areas";
 
 export const metadata: Metadata = {
-  title: "Estate Agents in Aylesbury, Stoke Mandeville, Wendover & the Vale",
+  title: "Estate Agents in Aylesbury, Fairford Leys, Kingsbrook, Watermead & the Vale",
   description:
-    "Ryan & Bartlett sell homes across Aylesbury and nearby villages including Stoke Mandeville, Wendover, Haddenham, Waddesdon and Weston Turville.",
+    "Ryan & Bartlett sell homes across Aylesbury and nearby villages including Fairford Leys, Kingsbrook, Watermead, Stoke Mandeville, Wendover, Haddenham, Waddesdon and Weston Turville.",
   alternates: { canonical: "/areas" },
 };
 
